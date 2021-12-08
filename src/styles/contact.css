@@ -1,0 +1,137 @@
+.contact-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image {
+  width: 60%;
+  height: 700px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-image h2 {
+  color: #f4f4f4;
+  font-size: 66px;
+  text-shadow: 1px 2px 10px #333;
+  display: none;
+}
+
+.contact-form {
+  width: 40%;
+  height: 700px;
+  padding: 100px 0 0 50px;
+  /* background-color: lightcoral; */
+}
+
+.contact-form h2 {
+  font-size: 52px;
+  color: #211716;
+}
+
+form {
+  margin-top: 60px;
+}
+
+form > label {
+  display: block;
+  font-size: 18px;
+  color: #333;
+}
+
+form > input {
+  width: 90%;
+  height: 50px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #211716;
+  margin-bottom: 20px;
+  transition: all 0.2s linear;
+}
+
+form > input:focus {
+  outline: none;
+  border-bottom: 2px solid #d03621;
+}
+
+form > textarea {
+  display: block;
+  width: 90%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #211716;
+  margin: 20px 0;
+  transition: all 0.2s linear;
+}
+
+form > textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #d03621;
+}
+
+.contact-btn-container > button {
+  background: #d03621;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+form > button:hover {
+  background: #211716;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .contact-container {
+    display: initial;
+  }
+  .contact-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+      url(../media/contact.jpg) !important;
+  }
+
+  .contact-image h2 {
+    display: initial;
+  }
+
+  .contact-form {
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+  }
+
+  .contact-form h2 {
+    display: none;
+  }
+
+  form {
+    margin-top: 10px;
+  }
+
+  form > input {
+    width: 100%;
+  }
+
+  form > textarea {
+    width: 100%;
+  }
+
+  .contact-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-btn-container > button {
+    padding: 15px 90px;
+  }
+}

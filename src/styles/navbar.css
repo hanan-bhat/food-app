@@ -1,0 +1,147 @@
+.navbar-container {
+  width: 100%;
+  height: 90px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.navbar-logo {
+  width: auto;
+  height: 100%;
+  margin-left: 70px;
+}
+
+.logo-home-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 90%;
+}
+
+.menu-collection-lg li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.menu-link-lg {
+  color: #211716;
+  font-size: 20px;
+  font-weight: 800;
+  transition: all 0.3s linear;
+}
+
+.menu-link-lg:hover {
+  color: #d03621;
+  border-bottom: 4px solid #d03621;
+}
+
+.mob-menu-btn {
+  border: none;
+  background: none;
+  position: relative;
+  z-index: 9999;
+  display: none;
+}
+
+.mob-menu-icon {
+  color: #211716;
+  font-size: 48px !important;
+}
+
+.mob-nav {
+  height: 100vh;
+  background: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+
+.mob-menu-logo {
+  width: 100%;
+  height: 100px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-menu-logo img {
+  height: 80%;
+}
+
+.mob-menu-collection {
+  margin-top: 10px;
+}
+
+.mob-menu-collection ul li {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-menu-item {
+  color: #211716;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.mob-menu-social {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-copyright {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.mob-copyright p {
+  color: #777;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 760px) {
+  .navbar-logo {
+    margin-left: 30px;
+    height: 80%;
+  }
+
+  .menu-collection-lg {
+    display: none;
+  }
+
+  .mob-menu-btn {
+    margin-right: 20px;
+    display: initial;
+  }
+}
+
+/*
+D03621    red
+211716    black
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+*/
