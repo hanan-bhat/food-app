@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import "../styles/navbar.css";
-import Logo from "../media/logo.png";
-import { Link } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import React, { useState } from 'react'
+import '../styles/navbar.css'
+import Logo from '../media/logo.png'
+import { Link } from 'react-router-dom'
+import MenuIcon from '@mui/icons-material/Menu'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import TwitterIcon from '@mui/icons-material/Twitter'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 const Navbar = () => {
-  const [mobMenuWidth, setMobMenuWidth] = useState("0px");
-  let showMenu = "hide";
+  const [mobMenuWidth, setMobMenuWidth] = useState('0px')
+  let showMenu = 'hide'
   const toggleMobMenu = () => {
-    if (showMenu === "hide") {
-      showMenu = "show";
-      setMobMenuWidth("90%");
-    } else if (showMenu === "show") {
-      showMenu = "hide";
-      setMobMenuWidth("0px");
+    if (showMenu === 'hide') {
+      showMenu = 'show'
+      setMobMenuWidth('90%')
+    } else if (showMenu === 'show') {
+      showMenu = 'hide'
+      setMobMenuWidth('0px')
     }
-  };
+  }
 
   const hideMobMenu = () => {
-    setMobMenuWidth("0%");
-    showMenu = "hide";
-  };
+    setMobMenuWidth('0%')
+    showMenu = 'hide'
+  }
 
   return (
     <div className="navbar-container">
@@ -54,7 +54,7 @@ const Navbar = () => {
                   className="mob-menu-item"
                   onClick={hideMobMenu}
                 >
-                  Menu
+                  Menu2
                 </Link>
               </li>
               <li>
@@ -111,7 +111,7 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
