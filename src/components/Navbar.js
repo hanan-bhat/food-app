@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import '../styles/navbar.css'
 import Logo from '../media/logo.png'
 import { Link } from 'react-router-dom'
-import Cart from './Cart'
+import CartNav from './Cart/CartNav'
+import CartMobNav from './Cart/CartMobNav'
 import MenuIcon from '@mui/icons-material/Menu'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
@@ -35,6 +36,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-menu">
+        <div className="mob-cart-container">
+          <CartMobNav />
+        </div>
         <button className="mob-menu-btn" onClick={toggleMobMenu}>
           <MenuIcon className="mob-menu-icon" />
         </button>
@@ -110,7 +114,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Cart />
+            <CartNav />
           </li>
           <li>
             <Link to="/login" className="menu-btn-lg login-btn">

@@ -37,12 +37,13 @@
   color: #211716;
   font-size: 20px;
   font-weight: 800;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 
 .menu-link-lg:hover {
   color: #d03621;
-  border-bottom: 4px solid #d03621;
+  border-bottom: 3px solid #211716;
+  border-top: 3px solid #211716;
 }
 
 .mob-menu-btn {
@@ -54,7 +55,7 @@
 }
 
 .mob-menu-icon {
-  color: #211716;
+  color: #211716 !important;
   font-size: 48px !important;
 }
 
@@ -144,7 +145,11 @@
   background-color: #211716;
 }
 
-@media screen and (min-width: 200px) and (max-width: 760px) {
+.mob-cart-container {
+  display: none;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
   .navbar-logo {
     margin-left: 30px;
     height: 80%;
@@ -157,6 +162,11 @@
   .mob-menu-btn {
     margin-right: 20px;
     display: initial;
+  }
+
+  .mob-cart-container {
+    display: initial;
+    background-color: lawngreen;
   }
 }
 

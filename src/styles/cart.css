@@ -14,8 +14,8 @@
 
 .cart-item-count {
   background-color: #d03621;
-  height: 15px;
-  width: 15px;
+  height: 17px;
+  width: 17px;
   color: #f4f4f4;
   display: flex;
   justify-content: center;
@@ -30,23 +30,26 @@
 }
 
 .menu-view-cart-items {
-  width: 300px;
+  max-width: 400px;
   background-color: #f1f2f5;
-  height: 0;
+  max-height: 400px;
   position: absolute;
-  left: -270px;
-  top: 30px;
+  /* left: -270px; */
+  left: -370px;
+  top: -300px;
   transition: all 0.3s linear;
   opacity: 0;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding-bottom: 10px;
+  z-index: 999;
+  border-radius: 5px;
 }
 
 .menu-view-cart-items::before {
   content: '';
   width: 0px;
-  height: 0px;
+  max-height: 400px;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 15px solid #f4f4f4;
@@ -57,11 +60,11 @@
 
 .menu-view-cart-items:hover {
   opacity: 1;
-  height: auto;
+  top: 20px;
 }
 .menu-cart-lg:hover ~ .menu-view-cart-items {
   opacity: 1;
-  height: auto;
+  top: 20px;
 }
 .menu-view-cart-items-content {
   width: 100%;
@@ -71,14 +74,38 @@
   flex-wrap: wrap;
 }
 
-.menu-cart-title {
+.mob-cart-top {
   width: 100%;
-  padding: 10px;
-  color: #211716;
+  height: 50px;
   background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.menu-cart-title {
+  width: 40%;
+  /* padding: 10px; */
+  color: #211716;
   font-size: 16px;
   font-weight: 800;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+}
+
+.goto-cart-btn {
+  background-color: #211716;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+}
+
+.goto-cart-btn:hover {
+  background-color: #e4e4e4;
+  color: #211716;
+  font-weight: 800;
 }
 
 .menu-cart-item {
@@ -114,6 +141,11 @@
 .menu-cart-prod-name {
   color: #211716;
   font-size: 20px;
+  transition: all 0.2s linear;
+}
+
+.menu-cart-prod-name:hover {
+  color: #d03621;
 }
 
 .menu-cart-prod-price {
@@ -130,7 +162,24 @@
 
 .delete-cart-item-btn {
   color: #d03621;
-  font-size: 28px !important;
+  font-size: 30px !important;
   cursor: pointer;
   margin-right: 10px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+  .menu-cart-link {
+    position: absolute;
+    left: -50px;
+    top: 35px;
+    z-index: -1;
+  }
+
+  .menu-view-cart-items {
+    display: none;
+  }
+
+  .cart-item-count {
+    z-index: -1;
+  }
 }
