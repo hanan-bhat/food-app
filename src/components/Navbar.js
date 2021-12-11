@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../styles/navbar.css'
 import Logo from '../media/logo.png'
 import { Link } from 'react-router-dom'
+import Cart from './Cart'
 import MenuIcon from '@mui/icons-material/Menu'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import TwitterIcon from '@mui/icons-material/Twitter'
@@ -54,7 +55,7 @@ const Navbar = () => {
                   className="mob-menu-item"
                   onClick={hideMobMenu}
                 >
-                  Menu2
+                  Menu
                 </Link>
               </li>
               <li>
@@ -106,6 +107,17 @@ const Navbar = () => {
           <li>
             <Link to="/contact" className="menu-link-lg">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Cart />
+          </li>
+          <li>
+            <Link to="/login" className="menu-btn-lg login-btn">
+              Login
+            </Link>
+            <Link to="/register" className="menu-btn-lg register-btn">
+              Register
             </Link>
           </li>
         </ul>

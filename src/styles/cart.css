@@ -1,0 +1,136 @@
+.menu-cart-link {
+  position: relative !important;
+  /* border: 1px solid #333; */
+}
+
+.menu-cart-lg {
+  color: #211716;
+  font-size: 28px !important;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 1;
+}
+
+.cart-item-count {
+  background-color: #d03621;
+  height: 15px;
+  width: 15px;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 900;
+  border-radius: 50%;
+  position: relative;
+  left: 10px;
+  bottom: 10px;
+  z-index: 999;
+}
+
+.menu-view-cart-items {
+  width: 300px;
+  background-color: #f1f2f5;
+  height: 0;
+  position: absolute;
+  left: -270px;
+  top: 30px;
+  transition: all 0.3s linear;
+  opacity: 0;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-bottom: 10px;
+}
+
+.menu-view-cart-items::before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #f4f4f4;
+  position: absolute;
+  top: -15px;
+  right: 15px;
+}
+
+.menu-view-cart-items:hover {
+  opacity: 1;
+  height: auto;
+}
+.menu-cart-lg:hover ~ .menu-view-cart-items {
+  opacity: 1;
+  height: auto;
+}
+.menu-view-cart-items-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu-cart-title {
+  width: 100%;
+  padding: 10px;
+  color: #211716;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.menu-cart-item {
+  width: 95%;
+  display: flex;
+  padding: 5px;
+  /* border-bottom: 2px solid #b5b5b5; */
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.menu-cart-item img {
+  width: 70px;
+  border-radius: 5px;
+}
+
+.menu-cart-item-container {
+  width: 70%;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-cart-item-content {
+  /* background-color: red; */
+  height: auto;
+  width: 95%;
+}
+
+.menu-cart-prod-name {
+  color: #211716;
+  font-size: 20px;
+}
+
+.menu-cart-prod-price {
+  color: #777;
+  font-size: 16px;
+}
+
+.delete-btn-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-cart-item-btn {
+  color: #d03621;
+  font-size: 28px !important;
+  cursor: pointer;
+  margin-right: 10px;
+}
